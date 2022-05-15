@@ -40,3 +40,43 @@ A continuación se muestran los conceptos / terminologías centrales que se util
   
 - **Aplicar:** Es una de las etapas donde se aplican los cambios de estado real / actual de la infraestructura para pasar al estado deseado.
 
+
+## Ciclo de vida de TerraForm
+El ciclo de vida de Terraform consiste en: init, plan, aplicary destruir.
+
+![Infraestructura como Codigo](/images/lifecycle.png)
+
+- **Terraform init** inicializa el directorio de trabajo que consta de todos los archivos de configuración
+
+- **Terraform Plan** se utiliza para crear un plan de ejecución para alcanzar el estado deseado de la infraestructura. Los cambios en los archivos de configuración se realizan para lograr el estado deseado.
+
+
+- **Terraform Apply** luego realiza los cambios en la infraestructura tal como se define en el plan, y la infraestructura llega al estado deseado.
+ 
+- **Terraform Destroy** se utiliza para eliminar todos los recursos de infraestructura antiguos, que están marcados como contaminados después de la fase de aplicación.
+
+## ¿Por qué Terraform?
+
+Existen algunas razones clave por las que los desarrolladores eligen utilizar Terraform sobre otras herramientas de infraestructura como código:
+
+- **Código abierto:** Terraform está respaldado por grandes comunidades de colaboradores que crean complementos (plugins) para la plataforma. Independientemente del proveedor de nube que utilice, es muy sencillo encontrar complementos, extensiones y soporte profesional. Esto significa que Terraform también evoluciona rápidamente, con nuevos beneficios y mejoras añadidas constantemente.
+  
+- **Independiente de la plataforma:** es decir, puede utilizarlo con cualquier proveedor de servicios de la nube. La mayoría de otras herramientas de IaC están diseñadas para funcionar con un solo proveedor de nube.
+  
+- **Infraestructura inmutable:** la mayoría de las herramientas de infraestructura como código crean una infraestructura mutable, lo que significa que esta puede cambiar para adaptarse a cambios, como una actualización de middleware o un nuevo servidor de almacenamiento. El peligro con la infraestructura mutable es el desvío de la configuración, a medida que los cambios se acumulan, el suministro real de diferentes servidores u otros elementos 'se desvían' más allá de la configuración original, haciendo que los errores o problemas de rendimiento sean difíciles de diagnosticar y corregir. Terraform suministra una infraestructura inmutable, lo que significa que con cada cambio en el entorno, la configuración actual se sustituye por una nueva que aplica el cambio y se vuelve a suministrar la infraestructura. Y lo que es aún mejor, las configuraciones anteriores se pueden conservar como versiones para habilitar las restauraciones a un estado previo, si es necesario o si así se desea.
+
+
+## Beneficios de TerraForm
+Los principales beneficios que nos proporciona Terraform son:
+
+- Admite crear infraestructuras en gran cantidad de proveedores.
+  
+- Nos permite administrar tanto infraestructuras grandes como una sola aplicación.
+
+- Proporciona una sintaxis fácil y única que permite administrar casi cualquier recurso independientemente de la plataforma y servicio.
+
+- Los ficheros de Terraform pueden ser compartidos y reutilizables para generar nuevos entornos y ser fácilmente exportables a otros clientes.
+
+- Los modelos de datos pueden ser versionados, y de esta forma muy sencilla observar el progreso de nuestro servicio.
+
+- También nos permite controlar los cambios en la infraestructura de manera simple y ágil.
