@@ -164,4 +164,7 @@ En Terraform, no hay un sistema maestro separado. Sin embargo, cuando trabaja co
 
 - _[9] Deloitte(2021). Los beneficios de utilizar Terraform. Deloitte. Recuperado de: https://www2.deloitte.com/es/es/blog/todo-tecnologia/2021/los-beneficios-de-utilizar-terraform.html_
 
-- _[2] Avi(2022). Comprensión de las herramientas de DevOps: Ansible y Terraform. Geekflare. Recuperado de: https://geekflare.com/es/devops-tools-ansible-and-terraform/_
+- _[10] Avi(2022). Comprensión de las herramientas de DevOps: Ansible y Terraform. Geekflare. Recuperado de: https://geekflare.com/es/devops-tools-ansible-and-terraform/_
+
+- _[11] F5 Glosary(2021). ¿Qué es la infraestructura como código?. F5 Glosary. Recuperado de: https://geekflare.com/es/devops-tools-ansible-and-terraform/_
+
