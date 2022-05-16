@@ -1,13 +1,13 @@
-# INFRAESTRUCTURA COMO CODIGO: TERRAFORM
+# INFRAESTRUCTURA COMO CÓDIGO: TERRAFORM
 
 ## PRESENTADO POR:
-### JAIRO ELIECER ROJAS HERRERA
+### JAIRO ELIÉCER ROJAS HERRERA
 ### EMILY VANESSA VANEGAS VILLAFAÑE
-### CANDELARIA FLOREZ PALENCIA
-### JOHAN ENRIQUE SUAREZ MARTINEZ
+### CANDELARIA FLÓREZ PALENCIA
+### JOHAN ENRIQUE SUÁREZ MARTINEZ
 
 
-## DIRIGIDO AL DOCENTE: RONALD ENRRIQUE CUELLO MEZA
+## DIRIGIDO AL DOCENTE: RONALD ENRIQUE CUELLO MEZA
 
 
 ## ASIGNATURA: SISTEMAS DISTRIBUIDOS
@@ -20,22 +20,22 @@
 ## SECCIÓN 9
 
 
-## CARTAGENA DE INDIAS, BOLÍVAR, 15 DE MAYO 2022
+## CARTAGENA DE INDIAS, BOLÍVAR, 16 DE MAYO 2022
 
 ##
 ##
-# Infraestructura Como Codigo: TerraForm
+# Infraestructura Como Código: Terraform
 
-## ¿Qué es la Infraestructura como codigo?
+## ¿Qué es la Infraestructura como coóigo?
 
-La infraestructura como código se refiere al aprovisionamiento y la gestión de la infraestructura, incluido el hardware, los recursos virtuales, las plataformas, los sistemas de contenedores, los servicios y las topologías, mediante definiciones declarativas o de guion (código) en lugar de mediante la configuración manual o el uso de herramientas de configuración tradicionales. La IaC separa las configuraciones, las políticas, los perfiles, los guiones y las plantillas del hardware o el software en el que se implementan para que puedan almacenarse, compartirse, revisarse y aplicarse como puede hacerse con el código.
+La infraestructura como código se refiere al aprovisionamiento y la gestión de la infraestructura, incluido el hardware, los recursos virtuales, las plataformas, los sistemas de contenedores, los servicios y las topologías, mediante definiciones declarativas o de guión (código) en lugar de, mediante la configuración manual o el uso de herramientas de configuración tradicionales. La IaC separa las configuraciones, las políticas, los perfiles, los guiones y las plantillas del hardware o el software en el que se implementan para que puedan almacenarse, compartirse, revisarse y aplicarse como puede hacerse con el código.
 
 Este enfoque, que ha crecido con la popularidad de las infraestructuras de la nube, surge a partir de la mentalidad de DevOps y aplica a la orquestación de la infraestructura el mismo tipo de control de versiones y de repetibilidad que los desarrolladores utilizan para el código fuente de las aplicaciones. Un enfoque IaC apoya la integración, entrega e implementación continuos, creando el mismo entorno de infraestructura cada vez que se aplica.
 
 ![Infraestructura como Codigo](/images/IaC.jpg)
 _Figura 1: La IaC separa los recursos de configuración del hardware o el software para que puedan almacenarse, compartirse y gestionarse como el código_
 
-## ¿Qué es TerraForm?
+## ¿Qué es Terraform?
 
 Terraform es una herramienta de aprovisionamiento de servidores. Cuando se trata de Terraform, no se está ligado a una imagen de servidor, sino a una infraestructura completa que puede contener servidores de aplicaciones, bases de datos, servidores CDN, balanceadores de carga, cortafuegos y otros. Mientras que las herramientas de administración de configuración aseguran que cada servidor individual esté en el estado deseado, una herramienta de aprovisionamiento de servidores como Terraform asegura que la infraestructura en su conjunto esté en el estado deseado.
 
@@ -45,7 +45,7 @@ Básicamente, Terraform permite a los programadores construir, cambiar y version
 
 Terraform es una aplicación con estado. Lo que significa que mantiene un registro de todo lo que construye en sus entornos de nubes, de modo que si necesitas cambiar algo o eliminar algo más tarde, Terraform sabrá lo que construyó, y puede volver y hacer esos cambios por ti.
 
-## Conceptos de TerraForm
+## Conceptos de Terraform
 A continuación se muestran los conceptos / terminologías centrales que se utilizan en Terraform:
 
 - **Variables:** También se utiliza como variables de entrada, es un par clave-valor utilizado por los módulos Terraform para permitir la personalización.
@@ -67,12 +67,12 @@ A continuación se muestran los conceptos / terminologías centrales que se util
 - **Aplicar:** Es una de las etapas donde se aplican los cambios de estado real / actual de la infraestructura para pasar al estado deseado.
 
 
-## Ciclo de vida de TerraForm
-El ciclo de vida de Terraform consiste en: init, plan, aplicary destruir.
+## Ciclo de vida de Terraform
+El ciclo de vida de Terraform consiste en: `init`, `plan`, `apply` y `destroy`.
 
 ![Ciclo de vida](/images/lifecycle.png)
 
-- **Terraform init** inicializa el directorio de trabajo que consta de todos los archivos de configuración
+- **Terraform Init** inicializa el directorio de trabajo que consta de todos los archivos de configuración.
 
 - **Terraform Plan** se utiliza para crear un plan de ejecución para alcanzar el estado deseado de la infraestructura. Los cambios en los archivos de configuración se realizan para lograr el estado deseado.
 
@@ -87,24 +87,24 @@ Existen algunas razones clave por las que los desarrolladores eligen utilizar Te
 
 - **Código abierto:** Terraform está respaldado por grandes comunidades de colaboradores que crean complementos (plugins) para la plataforma. Independientemente del proveedor de nube que utilice, es muy sencillo encontrar complementos, extensiones y soporte profesional. Esto significa que Terraform también evoluciona rápidamente, con nuevos beneficios y mejoras añadidas constantemente.
   
-- **Independiente de la plataforma:** es decir, puede utilizarlo con cualquier proveedor de servicios de la nube. La mayoría de otras herramientas de IaC están diseñadas para funcionar con un solo proveedor de nube.
+- **Independiente de la plataforma:** Es decir, puede utilizarlo con cualquier proveedor de servicios de la nube. La mayoría de otras herramientas de IaC están diseñadas para funcionar con un solo proveedor de nube.
   
-- **Infraestructura inmutable:** la mayoría de las herramientas de infraestructura como código crean una infraestructura mutable, lo que significa que esta puede cambiar para adaptarse a cambios, como una actualización de middleware o un nuevo servidor de almacenamiento. El peligro con la infraestructura mutable es el desvío de la configuración, a medida que los cambios se acumulan, el suministro real de diferentes servidores u otros elementos 'se desvían' más allá de la configuración original, haciendo que los errores o problemas de rendimiento sean difíciles de diagnosticar y corregir. Terraform suministra una infraestructura inmutable, lo que significa que con cada cambio en el entorno, la configuración actual se sustituye por una nueva que aplica el cambio y se vuelve a suministrar la infraestructura. Y lo que es aún mejor, las configuraciones anteriores se pueden conservar como versiones para habilitar las restauraciones a un estado previo, si es necesario o si así se desea.
+- **Infraestructura inmutable:** La mayoría de las herramientas de infraestructura como código crean una infraestructura mutable, lo que significa que esta puede cambiar para adaptarse a cambios, como una actualización de middleware o un nuevo servidor de almacenamiento. El peligro con la infraestructura mutable es el desvío de la configuración, a medida que los cambios se acumulan, el suministro real de diferentes servidores u otros elementos 'se desvían' más allá de la configuración original, haciendo que los errores o problemas de rendimiento sean difíciles de diagnosticar y corregir. Terraform suministra una infraestructura inmutable, lo que significa que con cada cambio en el entorno, la configuración actual se sustituye por una nueva que aplica el cambio y se vuelve a suministrar la infraestructura. Y lo que es aún mejor, las configuraciones anteriores se pueden conservar como versiones para habilitar las restauraciones a un estado previo, si es necesario o si así se desea.
 
 
-## ¿Como trabaja TerraForm?
+## ¿Cómo funciona Terraform?
 Terraform tiene dos componentes principales que conforman su arquitectura:
-- Nucleo de TerraForm
+- Nucleo de Terraform
 - Proveedores
 
 ![Arquitectura](/images/arquitectura.png)
 
-### Núcleo de TerraForm
+### Núcleo de Terraform
 Terraform core utiliza dos fuentes de entrada para hacer su trabajo.
 
-La primera es la fuente de entrada es una configuración de Terraform que usted, como usuario, configura. Aquí, usted define lo que debe crearse o aprovisionarse. Y la segunda fuente de entrada es un estado en el que terraform mantiene el estado actualizado de cómo se ve la configuración actual de la infraestructura.
+La primera es la fuente de entrada es una *configuración de Terraform* que usted, como usuario, configura. Aquí, usted define lo que debe crearse o aprovisionarse. Y la segunda fuente de entrada es un *estado* en el que terraform mantiene el estado actualizado de cómo se ve la configuración actual de la infraestructura.
 
-Entonces, lo que hace terraform core es tomar la información y determinar el plan de lo que se debe hacer. Compara el estado, cuál es el estado actual y cuál es la configuración que desea en el resultado final. Averigua qué se debe hacer para llegar al estado deseado en el archivo de configuración. Calcula lo que se debe crear, lo que se debe actualizar, lo que se debe eliminar para crear y aprovisionar la infraestructura.
+Entonces, lo que hace Terraform core es tomar la información y determinar el plan de lo que se debe hacer. Compara el estado, cuál es el estado actual y cuál es la configuración que desea en el resultado final. Averigua qué se debe hacer para llegar al estado deseado en el archivo de configuración. Calcula lo que se debe crear, lo que se debe actualizar, lo que se debe eliminar para crear y aprovisionar la infraestructura.
 
 ### Proveedores
 El segundo componente de la arquitectura son los proveedores de tecnologías específicas. Esto podría ser proveedores de nube como AWS, Azure, GCP u otra infraestructura como plataforma de servicio. También es un proveedor de componentes de más alto nivel como Kubernetes u otras herramientas de plataforma como servicio, incluso algún software como herramienta de autoservicio.
@@ -112,7 +112,7 @@ El segundo componente de la arquitectura son los proveedores de tecnologías esp
 Terraform tiene más de cien proveedores para diferentes tecnologías, y cada proveedor luego brinda acceso de usuario de terraform a sus recursos. Entonces, a través del proveedor de AWS, por ejemplo, tiene acceso a cientos de recursos de AWS como instancias EC2, los usuarios de AWS, etc. Con el proveedor de Kubernetes, tiene acceso a productos básicos, recursos como servicios e implementaciones y espacios de nombres, etc.
 
 
-## Beneficios de TerraForm
+## Beneficios de Terraform
 Los principales beneficios que nos proporciona Terraform son:
 
 - Admite crear infraestructuras en gran cantidad de proveedores.
@@ -128,7 +128,7 @@ Los principales beneficios que nos proporciona Terraform son:
 - También nos permite controlar los cambios en la infraestructura de manera simple y ágil.
 
 
-## Casos de uso de TerrForm
+## Casos de uso de Terraform
 
 - Es una práctica común tener tanto un entorno de producción como de puesta en escena o de control de calidad. A medida que el entorno de producción crece y se hace más complejo, se hace cada vez más oneroso mantener un entorno de puesta en escena actualizado. Usando Terraform, el entorno de producción puede ser codificado y luego compartido con la puesta en escena.  Estas configuraciones pueden ser usadas para crear rápidamente nuevos entornos para probar y luego ser fácilmente eliminados. Terraform puede ayudar a domar la dificultad de mantener entornos paralelos, y hace que sea práctico crearlos y destruirlos de forma elástica.
 
