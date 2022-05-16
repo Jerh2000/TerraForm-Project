@@ -35,7 +35,7 @@ Este enfoque, que ha crecido con la popularidad de las infraestructuras de la nu
 ![Infraestructura como Codigo](/images/IaC.jpg)
 _Figura 1: La IaC separa los recursos de configuración del hardware o el software para que puedan almacenarse, compartirse y gestionarse como el código_
 
-## ¿Qúe es TerraForm?
+## ¿Qué es TerraForm?
 
 Terraform es una herramienta de aprovisionamiento de servidores. Cuando se trata de Terraform, no se está ligado a una imagen de servidor, sino a una infraestructura completa que puede contener servidores de aplicaciones, bases de datos, servidores CDN, balanceadores de carga, cortafuegos y otros. Mientras que las herramientas de administración de configuración aseguran que cada servidor individual esté en el estado deseado, una herramienta de aprovisionamiento de servidores como Terraform asegura que la infraestructura en su conjunto esté en el estado deseado.
 
