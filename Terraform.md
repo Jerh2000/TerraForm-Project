@@ -102,7 +102,7 @@ Terraform tiene dos componentes principales que conforman su arquitectura:
 ### Núcleo de TerraForm
 Terraform core utiliza dos fuentes de entrada para hacer su trabajo.
 
-Los en el primer La fuente de entrada es una configuración de Terraform que usted, como usuario, configura. Aquí, usted define lo que debe crearse o aprovisionarse. Y el segundo La fuente de entrada es un estado en el que terraform mantiene el estado actualizado de cómo se ve la configuración actual de la infraestructura.
+La primera es la fuente de entrada es una configuración de Terraform que usted, como usuario, configura. Aquí, usted define lo que debe crearse o aprovisionarse. Y la segunda fuente de entrada es un estado en el que terraform mantiene el estado actualizado de cómo se ve la configuración actual de la infraestructura.
 
 Entonces, lo que hace terraform core es tomar la información y determinar el plan de lo que se debe hacer. Compara el estado, cuál es el estado actual y cuál es la configuración que desea en el resultado final. Averigua qué se debe hacer para llegar al estado deseado en el archivo de configuración. Calcula lo que se debe crear, lo que se debe actualizar, lo que se debe eliminar para crear y aprovisionar la infraestructura.
 
