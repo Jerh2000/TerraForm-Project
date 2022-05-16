@@ -26,7 +26,7 @@
 ##
 # Infraestructura Como Código: Terraform
 
-## ¿Qué es la Infraestructura como coóigo?
+## ¿Qué es la Infraestructura como código?
 
 La infraestructura como código se refiere al aprovisionamiento y la gestión de la infraestructura, incluido el hardware, los recursos virtuales, las plataformas, los sistemas de contenedores, los servicios y las topologías, mediante definiciones declarativas o de guión (código) en lugar de, mediante la configuración manual o el uso de herramientas de configuración tradicionales. La IaC separa las configuraciones, las políticas, los perfiles, los guiones y las plantillas del hardware o el software en el que se implementan para que puedan almacenarse, compartirse, revisarse y aplicarse como puede hacerse con el código.
 
