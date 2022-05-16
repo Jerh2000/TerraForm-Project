@@ -135,8 +135,8 @@ Los principales beneficios que nos proporciona Terraform son:
 - A un cierto tamaño de organización, se convierte en un gran desafío para un equipo de operaciones centralizado gestionar una infraestructura grande y creciente. En cambio, resulta más atractivo hacer una infraestructura de «autoservicio», permitiendo a los equipos de producto gestionar su propia infraestructura utilizando las herramientas proporcionadas por el equipo central de operaciones. Utilizando Terraform, el conocimiento de cómo construir y escalar un servicio puede ser codificado en una configuración. Las configuraciones de Terraform pueden ser compartidas dentro de una organización permitiendo a los equipos de clientes utilizar la configuración como una caja negra y utilizar Terraform como una herramienta para gestionar sus servicios.
 
 
-## TerraForm VS Otros
-### TerraForm frente a Kubernetes
+## Terraform VS Otros
+### Terraform frente a Kubernetes
 Es común que exista confusión entre Terraform y Kubernetes, y lo que realmente hace cada uno de ellos. La verdad es que no son alternativas y realmente trabajan juntos de manera efectiva.
 
 Kubernetes es un sistema de orquestación de contenedores de código abierto que permite a los desarrolladores planificar implementaciones en nodos de un clúster de computación y gestionar activamente cargas de trabajo contenerizadas, y garantizar que su estado coincida con las intenciones de los usuarios.
@@ -145,7 +145,7 @@ Terraform, por otro lado, es una herramienta de Infraestructura como código con
 
 Terraform puede automatizar y gestionar la Infraestructura como servicio (IaaS), la o incluso funcionalidades a nivel de Software como servicio (SaaS) y crear todos estos recursos en todos los proveedores en paralelo. Se puede utilizar Terraform para automatizar el suministro de Kubernetes, en particular, clústeres de Kubernetes gestionado en plataformas de la nube, y para automatizar la implementación de aplicaciones en un clúster.
 
-### TerraForm frente a Ansible
+### Terraform frente a Ansible
 
 Terraform y Ansible son herramientas de Infraestructura como código, pero hay un par de diferencias significativas entre las dos:
 
